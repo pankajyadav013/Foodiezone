@@ -14,11 +14,6 @@ const Header = props => {
           value={search}
           onChange={onInputChange}
         />
-        <div class="input-group-append">
-          <button className="btn btn-dark" onClick={onSearchClick}>
-            Search Recipe
-          </button>
-        </div>
       </div>
       
     </div>
