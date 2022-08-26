@@ -18,6 +18,14 @@ function App() {
     );
     setRecipes(res.data.hits);
   };
+  
+  const onInputChange = e => {
+    setSerach(e.target.value);
+  };
+
+  const onSearchClick = () => {
+    getRecipes();
+  };
 
   return (
     
