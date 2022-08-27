@@ -33,6 +33,9 @@ function App() {
         onInputChange={onInputChange}
         onSearchClick={onSearchClick}
       />
+      <div className="container">
+      <Recipes recipes={recipes} />
+      </div>
   );
 }
 
