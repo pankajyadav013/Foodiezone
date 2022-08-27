@@ -28,7 +28,11 @@ function App() {
   };
 
   return (
-    
+     <Header
+        search={search}
+        onInputChange={onInputChange}
+        onSearchClick={onSearchClick}
+      />
   );
 }
 
