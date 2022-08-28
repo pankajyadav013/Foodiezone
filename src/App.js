@@ -28,6 +28,7 @@ function App() {
   };
 
   return (
+    <div className="App">
      <Header
         search={search}
         onInputChange={onInputChange}
@@ -36,6 +37,7 @@ function App() {
       <div className="container">
       <Recipes recipes={recipes} />
       </div>
+    </div>
   );
 }
 
