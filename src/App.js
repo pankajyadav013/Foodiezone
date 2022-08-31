@@ -5,20 +5,23 @@ import Recipes from "./components/Recipes";
 import Axios from "axios";
 
 function App() {
-  const [search, setSerach] = useState("chiken");
+  const [search, setSerach] = useState("pizza");
   const [recipes, setRecipes] = useState([]);
+
+  const APP_ID = "825cd951";
+  const APP_KEY = "2c81f5e1bee1c840308f4ce676c53fa1";
 
   useEffect(() => {
     getRecipes();
+    
   }, []);
-
-  const getRecipes = async () => {
+   const getRecipes = async () => {
     const res = await Axios.get(
       `https://api.edamam.com/search?q=${search}&app_id=${APP_ID}&app_key=${APP_KEY}`
     );
     setRecipes(res.data.hits);
   };
-  
+
   const onInputChange = e => {
     setSerach(e.target.value);
   };
@@ -27,15 +30,16 @@ function App() {
     getRecipes();
   };
 
+  
   return (
     <div className="App">
-     <Header
+      <Header
         search={search}
         onInputChange={onInputChange}
         onSearchClick={onSearchClick}
       />
       <div className="container">
-      <Recipes recipes={recipes} />
+        <Recipes recipes={recipes} />
       </div>
     </div>
   );
