@@ -8,8 +8,8 @@ function App() {
   const [search, setSerach] = useState("pizza");
   const [recipes, setRecipes] = useState([]);
 
-  const APP_ID = "825cd951";
-  const APP_KEY = "2c81f5e1bee1c840308f4ce676c53fa1";
+  const APP_ID = "ca49f17d";
+  const APP_KEY = "a0b7c997bd5ddfc7f6647bb00fecbf0e";
 
   useEffect(() => {
     getRecipes();
