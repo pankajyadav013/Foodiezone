@@ -1,8 +1,9 @@
 import React from "react";
 
 const Header = props => {
+  const { search, onInputChange, onSearchClick } = props;
   return (
-   <div className="jumbotron">
+    <div className="jumbotron">
       <h1 className="display-1">
         <i class="material-icons brand-icon">fastfood</i> Food Recipe
       </h1>
@@ -20,7 +21,6 @@ const Header = props => {
           </button>
         </div>
       </div>
-      
     </div>
   );
 };
